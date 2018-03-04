@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html style="overflow-y: hidden;">
+<head>
+	<link rel=stylesheet type="text/css" href="css.css">
+	<link rel=stylesheet type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+        <script src="js/jquery.min.js"></script>
+        <meta charset="UTF-8"/>
+	<title>Register</title>
+</head>
+<body>
+
+    <div class="container">
+
+			
+            <p id="profile-name" class="profile-name-card"> E-shop Webapp - Register</p>
+            <form class="form-signin" action="registeruser" method="post">
+                <span id="username" class="username"></span>
+                <input type="text" name ="inputName" id="inputName" class="form-control" placeholder="Username" required autofocus>
+                <input onkeyup='check();' type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+                <input onkeyup='check();' type="password" name="confirmPassword" id="confirmPassword" class="form-control" placeholder="Confirm Password" required>
+                
+                <button id="searchbtn" class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Register</button>
+            </form>
+            
+        </div>
+    
+    <script>
+        var check = function() {
+            if (document.getElementById('inputPassword').value ==
+              document.getElementById('confirmPassword').value) {
+              $('button').prop('disabled', false);
+            } else {
+              $('button').prop('disabled', true);
+            }
+          }
+    </script>
+
+</body>
+</html>
